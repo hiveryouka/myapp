@@ -1,0 +1,11 @@
+<% provide:title,'card' %>
+<h1> カード一覧</h1>
+<ul>
+<% @cards.each do |card| %>
+    <li>
+    <%= card.id %>
+   	<%= link_to card.name,card %>
+   
+    </li>
+  <% end %>
+  </ul>

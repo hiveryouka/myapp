@@ -15,5 +15,13 @@ namespace :db do
                    password: password,
                    password_confirmation: password)
     end
+    4.times do |g|
+      12.times do |n|
+        Card.create!(name: "ハート"+"#{n+1}") if g==0
+        Card.create!(name: "ダイヤ"+"#{n+1}")  if g==1
+        Card.create!(name: "スペード"+"#{n+1}")  if g==2
+        Card.create!(name: "クローバー"+"#{n+1}")  if g==3
+      end
+    end
   end
 end
